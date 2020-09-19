@@ -34,7 +34,12 @@ paths:
                   type: string
                 username:
                   type: string
-            examples: {}
+            examples:
+              example:
+                value:
+                  displayName: John Doe
+                  email: jdoe@email.com
+                  username: jdoe
         description: ''
 components:
   schemas: {}
