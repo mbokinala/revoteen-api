@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: revoteen
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+  - url: 'http://www.revoteen.com/api'
+    description: ''
+paths:
+  /users:
+    post:
+      summary: Create User
+      tags: []
+      responses:
+        '201':
+          description: Created
+      operationId: post-users
+      description: creates a new user
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: firebase auth id token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                email:
+                  type: string
+                username:
+                  type: string
+            examples: {}
+        description: ''
+components:
+  schemas: {}
