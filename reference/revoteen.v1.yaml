@@ -34,12 +34,15 @@ paths:
                   type: string
                 username:
                   type: string
+                UID:
+                  type: string
             examples:
-              example:
+              example-2:
                 value:
-                  displayName: John Doe
-                  email: jdoe@email.com
-                  username: jdoe
+                  displayName: string
+                  email: string
+                  username: string
+                  UID: SE3IKvcD8dRjfiyI74uj9G0cY2o1
         description: ''
 components:
   schemas: {}
