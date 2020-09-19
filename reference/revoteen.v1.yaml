@@ -9,7 +9,7 @@ servers:
 paths:
   /users:
     post:
-      summary: Create User
+      summary: POST /users
       tags: []
       responses:
         '201':
