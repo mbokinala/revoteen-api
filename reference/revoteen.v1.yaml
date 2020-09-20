@@ -2,11 +2,10 @@ openapi: 3.0.0
 info:
   title: revoteen
   version: '1.0'
+  description: ''
 servers:
-  - url: 'http://localhost:3000'
-    description: local development
-  - url: 'http://www.revoteen.com/api'
-    description: production
+  - url: 'http://dev.revoteen.com/api'
+    description: development staging
 paths:
   /users:
     post:
