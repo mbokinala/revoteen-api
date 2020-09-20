@@ -44,6 +44,48 @@ paths:
                   username: string
                   UID: SE3IKvcD8dRjfiyI74uj9G0cY2o1
         description: ''
+  '/users/{uid}':
+    parameters:
+      - schema:
+          type: string
+        name: uid
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  UID:
+                    type: string
+                  bio:
+                    type: string
+                  displayName:
+                    type: string
+                  followers:
+                    type: string
+                  following:
+                    type: string
+                  interests:
+                    type: string
+                  location:
+                    type: string
+                  username:
+                    type: string
+      operationId: get-users-uid
+      description: Get data of a specific user
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: firebase auth id token
 components:
   schemas: {}
   securitySchemes: {}
