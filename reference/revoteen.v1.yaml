@@ -9,7 +9,7 @@ servers:
 paths:
   /users:
     post:
-      summary: POST /users
+      summary: Create user
       tags: []
       responses:
         '201':
@@ -22,6 +22,7 @@ paths:
           in: header
           name: Authorization
           description: firebase auth id token
+          required: true
       requestBody:
         content:
           application/json:
@@ -52,7 +53,7 @@ paths:
         in: path
         required: true
     get:
-      summary: Your GET endpoint
+      summary: Get user data
       tags: []
       responses:
         '200':
@@ -86,6 +87,7 @@ paths:
           in: header
           name: Authorization
           description: firebase auth id token
+          required: true
 components:
   schemas: {}
   securitySchemes: {}
