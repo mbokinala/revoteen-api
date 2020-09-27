@@ -9,20 +9,14 @@ servers:
 paths:
   /users:
     post:
-      summary: Create user
+      summary: Create user - IN DEVELOPMENT
       tags: []
       responses:
         '201':
           description: Created
       operationId: post-users
       description: creates a new user
-      parameters:
-        - schema:
-            type: string
-          in: header
-          name: Authorization
-          description: firebase auth id token
-          required: true
+      parameters: []
       requestBody:
         content:
           application/json:
@@ -78,6 +72,8 @@ paths:
                   location:
                     type: string
                   username:
+                    type: string
+                  downloadURL:
                     type: string
       operationId: get-users-uid
       description: Get data of a specific user
