@@ -84,29 +84,29 @@ paths:
           name: Authorization
           description: firebase auth id token
           required: true
-  /users/following:
-    parameters: []
+  '/users/{uid}/following':
+    parameters:
+      - schema:
+          type: string
+        name: uid
+        in: path
+        required: true
     post:
-      summary: Add Follow
+      summary: Add follow
       operationId: post-users-uid-following
       responses:
-        '201':
-          description: Created
-      description: Follow a user
+        '200':
+          description: OK
       requestBody:
         content:
           application/json:
             schema:
-              description: ''
               type: object
               properties:
                 followId:
                   type: string
-                  minLength: 1
-              required:
-                - followId
     delete:
-      summary: Remove Follow
+      summary: Remove follow
       operationId: delete-users-uid-following
       responses:
         '200':
