@@ -84,6 +84,32 @@ paths:
           name: Authorization
           description: firebase auth id token
           required: true
+  '/users/{uid}/following':
+    get:
+      summary: Follow
+      tags: []
+      responses: {}
+      operationId: get-Follow-user
+    parameters: []
+    post:
+      summary: ''
+      operationId: post-users-uid-following
+      responses:
+        '201':
+          description: Created
+      description: Follow a user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                followId:
+                  type: string
+                  minLength: 1
+              required:
+                - followId
 components:
   schemas: {}
   securitySchemes: {}
